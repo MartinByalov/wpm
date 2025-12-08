@@ -1,0 +1,223 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.main-section {
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.top-controls-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    max-width: 800px;
+}
+
+.timer-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #e3f2fd;
+    border: 2px solid #2196F3;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.timer {
+    color: #1565c0;
+}
+
+.reset-top {
+    padding: 15px 25px;
+    background-color: #2196F3;
+    color: white;
+    border: 2px solid #2196F3;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s, opacity 0.3s;
+    text-align: center;
+}
+
+.reset-top:hover {
+    background-color: #1976D2;
+}
+
+#referenceContainer {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+#referenceText {
+    font-family: Georgia, serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #444;
+    white-space: normal;
+    word-break: normal;
+    word-wrap: break-word;
+}
+
+#referenceText span.correct-char-ref {
+    background-color: #c8e6c9;
+    color: #333;
+}
+
+#referenceText span.next-char-ref {
+    border-bottom: 2px solid #ff9800;
+}
+
+.typing-input {
+    min-height: 200px;
+    padding: 15px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+[data-placeholder]:empty:before {
+    content: attr(data-placeholder);
+    color: #888;
+    pointer-events: none;
+}
+
+.typing-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+#textInput span.incorrect-char-input {
+    text-decoration: underline wavy red 2px;
+}
+
+.typing-input.test-finished {
+    caret-color: transparent;
+}
+
+.stats-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stats-container h2 {
+    color: #4CAF50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.stats-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.stats-container span {
+    font-weight: bold;
+    color: #00796b;
+}
+
+.stats-container #errorCount {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.status-running {
+    color: #f57c00;
+}
+
+.status-finished {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.download-btn {
+    width: 50px;
+    margin-top: 20px;
+    padding: 18px 25px;
+    font-size: 0.9em;
+    font-weight: 700;
+    background-color: #4CAF50;
+    background-image: linear-gradient(to bottom right, #4CAF50, #388E3C);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.download-btn:hover {
+    background-image: linear-gradient(to bottom right, #388E3C, #4CAF50);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.download-btn:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    text-align: center;
+    color: #999;
+    width: 100%;
+    max-width: 800px;
+}
+
+.reference-container {
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.reference-text {
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin: 0;
+}
